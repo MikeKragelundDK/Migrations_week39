@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Getter
 @Setter
@@ -15,6 +17,8 @@ public class Course {
     private int id;
     @Column(name = "title")
     private String title;
-    @Column(name = "credits")
-    private int credits;
+
+    // Update for 7, change to double.
+    @Column(name = "credits", precision = 5, scale = 2)
+    private BigDecimal credits;
 }

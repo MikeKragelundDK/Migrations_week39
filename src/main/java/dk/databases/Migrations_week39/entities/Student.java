@@ -21,6 +21,14 @@ public class Student {
     private String lastName;
     @Column(name = "email")
     private String email;
-    @Column(name = "enrollment_date")
+    @Column(name = "enrollment_date", columnDefinition = "datetime(6)")
     private LocalDate EnrollmentDate;
+
+    //Update task 2
+    @Column(name ="middle_name")
+    private String middleName;
+
+    //Update task 3
+    @Column(name ="date_of_birth")
+    private LocalDate DateOfBirth;
 }
