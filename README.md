@@ -1,4 +1,4 @@
-# State-Based Migrations — Short README (for review)
+# State-Based Migrations
 
 
 ## Approach
@@ -6,8 +6,8 @@
 * I keep each step’s `.sql` files in `/resources/blueprint/`.
 * I use **Atlas**. I maintain **two databases**:
 
-    * one empty database created from the newest `blueprint.sql` (my mock DB),
-    * and one with the prior version (my dev/“production” stand-in).
+  * one empty database created from the newest `blueprint.sql` (my mock DB),
+  * and one with the prior version (my dev/“production” stand-in).
 * From those, I run an Atlas schema diff locally, which gives me a recipe for changing my production-like DB to the mock DB.
   I paste Atlas’ output into `/resources/blueprint/atlas.sql`.
 * I then **run the generated SQL manually** in my SQL workspace.
@@ -58,3 +58,11 @@ If this were production, I’d use a value object or validation to enforce preci
 
 * `/resources/blueprint/blueprint.sql`: the desired latest state per version.
 * `/resources/blueprint/atlas.sql`: the SQL diff Atlas produced for that version (which I ran manually).
+
+---
+
+### why i chosen destructive vs non-destructive approach to schema changes
+
+I wanted to say that i did choose a non-destructice approach to the schema changes, but that would not be true.
+Since it was so easy to recover my database, i actually ended up deleting everything when something broke or i made a poor decition.
+Getting the diff file from atlas makes it easy to do non-destructive migrations, which you should always aim to do. 
