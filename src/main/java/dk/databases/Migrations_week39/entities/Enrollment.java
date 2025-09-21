@@ -17,6 +17,6 @@ public class Enrollment {
     private int studentId;
     @Column(name = "course_id")
     private int courseId;
-    @Column(name = "grade")
+    @Column(name = "final_grade")
     private int grade;
 }
