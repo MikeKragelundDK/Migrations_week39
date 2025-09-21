@@ -1,6 +1,5 @@
 # State-Based Migrations — Short README (for review)
 
-> This document is a brief explanation of **what I did** and **why**—it’s not meant to be executed.
 
 ## Approach
 
