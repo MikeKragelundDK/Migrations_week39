@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -17,8 +18,8 @@ public class Course {
     private int id;
     @Column(name = "title")
     private String title;
-    @Column(name = "credits")
-    private int credits;
+    @Column(name = "credits", precision = 5, scale = 2)
+    private BigDecimal credits;
     @OneToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "instructor_id", foreignKey =  @ForeignKey(name = "fk_course_instructor"), nullable = true)
     private Instructor instructorId;

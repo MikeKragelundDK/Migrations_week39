@@ -38,3 +38,12 @@ In theory it could also be a manytoone, or manytomany relation..
 V5: 
 Similar to the adding tasks, changed the entity and wrote a new column on the blueprint.sql file. 
 
+V6:
+Added department to the relation. Did a onetoone, on the instructorId.
+
+V7: 
+This one was surprisingly annoying, took me a while to figure out how to make jpa stop throwing exceptions.. 
+Ended up using BigDecimal which isn't optimal ->
+BigDecimal has no max value, meaning we actually risk overshooting the (5,2) target/constraint set by SQL. 
+If this was production code, you would probably use custom value objects - verfying that we don't overshoot in the code.
+Or else we risk having business logic coded into the db.
