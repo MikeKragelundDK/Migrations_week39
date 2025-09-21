@@ -38,3 +38,6 @@ In theory it could also be a manytoone, or manytomany relation..
 V5: 
 Similar to the adding tasks, changed the entity and wrote a new column on the blueprint.sql file. 
 
+V6: 
+Added department to the relation. 
+Did a onetoone, on the instructorId.
