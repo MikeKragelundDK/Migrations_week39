@@ -23,4 +23,6 @@ public class Student {
     private String email;
     @Column(name = "enrollment_date")
     private LocalDate EnrollmentDate;
+    @Column(name = "middle_name")
+    private String middleName;
 }

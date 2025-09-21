@@ -19,4 +19,7 @@ V1:
 In this step i create the database - i make the 3 tables and connect enrollment to student and course, on their id's. 
 My "production" database will be empty for this step, so the "schema diff" from atlas will be very similar to my blueprint. 
 
+V2: 
+In this step i add a middle_name attribute to both my mock database and the entity. 
 
+V3
