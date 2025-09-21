@@ -1,0 +1,2 @@
+ALTER TABLE student
+    ADD COLUMN middle_name VARCHAR(100) NULL;
