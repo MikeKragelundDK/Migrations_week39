@@ -39,3 +39,16 @@ I also added **V6.1** as a patch because JPA complained about **decimal** and **
 
 **V7**
 I struggled again with JPA vs. DB data types (especially decimals). Given the tight scope of the decimal, the “optimal” solution would be a **value object** to validate/sanitize inputs and keep the logic in code rather than relying purely on database constraints.
+
+
+---
+
+### Why i chosen destructive vs non-destructive approach to schema changes. 
+
+I chose a **non-destructive** approach to the schema changes. 
+I generally prefer a non-destructive approach since i am using JPA to validate the changes, if the schema breaks expectations JPA will scream. 
+Another reason is that it's easier to recover, if a migration goes wrong which makes it easier to hotfix down the line instead of trying to "undo" a change. 
+I've been working with Spring professionally for approx 6 months time now, and i've seen firsthand the importance of data persistence and how costly it is to lose data, 
+this will always make me prefer the non-destructive path. Unless a table is completely drained and the code updated, i won't drop a table. 
+
+
