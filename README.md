@@ -27,4 +27,10 @@ My "production" database will be empty for this step, so the "schema diff" from 
 V2: 
 In this step i add a middle_name attribute to both my mock database and the entity. 
 
-V3
+V3:
+Very similar to version 2 - worth noting is that atlas also cares for insertion order - "AFTER email"
+
+V4: 
+I made the instructor table, and added the keys. 
+I put a onetoone relationship between them, where i set null/remove when deleted
+In theory it could also be a manytoone, or manytomany relation.. 
