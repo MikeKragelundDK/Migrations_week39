@@ -34,3 +34,7 @@ V4:
 I made the instructor table, and added the keys. 
 I put a onetoone relationship between them, where i set null/remove when deleted
 In theory it could also be a manytoone, or manytomany relation.. 
+
+V5: 
+Similar to the adding tasks, changed the entity and wrote a new column on the blueprint.sql file. 
+
