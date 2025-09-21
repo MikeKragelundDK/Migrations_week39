@@ -19,8 +19,10 @@ public class Student {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+    @Column(name ="middle_name")
+    private String middleName;
     @Column(name = "email")
     private String email;
     @Column(name = "enrollment_date", columnDefinition = "datetime(6)")
-    private LocalDate EnrollmentDate;   
+    private LocalDate EnrollmentDate;
 }
