@@ -1,0 +1,3 @@
+ALTER TABLE department
+    MODIFY budget DOUBLE NOT NULL,
+    MODIFY start_date DATETIME(6) NOT NULL;
