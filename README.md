@@ -13,6 +13,11 @@ Compare the mock db with my production db.
 Get a file from atlas and run that on my production db. 
 I hope this flow makes sense. 
 
+After each version i will compile my code, it has the tag:
+spring.jpa.hibernate.ddl-auto=validate
+
+If the entities don't match the database schema, jpa will throw an exception. 
+
 This is my state-based migration:
 
 V1: 
