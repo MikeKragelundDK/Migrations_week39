@@ -17,8 +17,6 @@ public class Course {
     private int id;
     @Column(name = "title")
     private String title;
-
-    // Update for 7, change to double.
-    @Column(name = "credits", precision = 5, scale = 2)
-    private BigDecimal credits;
+    @Column(name = "credits")
+    private int credits;
 }
