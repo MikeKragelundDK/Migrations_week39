@@ -17,6 +17,6 @@ public class Course {
     private int id;
     @Column(name = "title")
     private String title;
-    @Column(name = "credits")
-    private int credits;
+    @Column(name = "credits", precision = 5, scale = 2)
+    private BigDecimal credits;
 }
